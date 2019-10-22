@@ -1,13 +1,18 @@
 <template>
-  <div>
-    <b-navbar variant="faded"
-              type="light">
-      <b-navbar-brand href="#">
-        <img src="@/assets/logo.png"
-             class="d-inline-block align-top"
-             alt="Kitten">xxxx
-      </b-navbar-brand>
-    </b-navbar>
+  <div class="header">
+    <nav class="navbar">
+      <a href="#"
+         class="menu">
+        <img src="@/assets/images/menu.png"
+             style="width:28px;"
+             alt="menu">
+      </a>
+      <a href="#"
+         class="logo"> <img style="width:68px;"
+             src="@/assets/phonelogo.png"
+             alt="logo">
+      </a>
+    </nav>
   </div>
 </template>
 
@@ -18,4 +23,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+.navbar {
+  position: relative;
+  padding: 22px 28px;
+
+  a > img {
+    vertical-align: middle;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+  }
+}
 </style>
