@@ -22,16 +22,37 @@
                muted
                autoplay
                loop></video>
+        <div class="video-control">
+          <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/slogan-cfd33df7dd.png">
+          <img @click="$emit('playVideo')"
+               id="video-play"
+               src="https://staticweb.keepcdn.com/staticShow/images/homepage/play-1a7aadd99d.png">
+        </div>
+        <div class="video-bottom">
+          <div class="bottom-left">
+            Keep • 自律给我自由
+            <br>
+            <br>
+            一站式解决你所有的运动需求
+          </div>
+          <div class="bottom-right">
+            <a href="#"><img src="https://staticweb.keepcdn.com/staticShow/images/appledownload-bf3fce6ff0.png"
+                   alt=""></a>
+            <a href="#"><img src="https://staticweb.keepcdn.com/staticShow/images/androiddownload-7af2fefe76.png"
+                   alt=""></a>
+            <a href="javascript:;"
+               class="qrcode"><span></span><img src="https://staticweb.keepcdn.com/staticShow/images/homepage/qrcode-9be5654ac6.png"
+                   class="qrcode"></a>
+          </div>
+        </div>
       </div>
-
     </header>
   </div>
 </template>
 
 <script>
-export default {
 
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
@@ -63,16 +84,15 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  z-index: -1;
-}
-
-.video-wrap {
-  display: none;
 }
 
 @media (max-width: 767.98px) {
   .phone-download-warp {
     display: block;
+  }
+
+  .video-wrap {
+    display: none;
   }
 }
 @media (min-width: 768px) {
@@ -85,18 +105,112 @@ export default {
   }
   .video-wrap {
     display: block;
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
-    left: 0;
-    top: 0;
     overflow: hidden;
+
+    .video-control {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(34, 34, 34, 0.8);
+
+      #video-play {
+        display: none;
+      }
+    }
+
+    .video-bottom {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      bottom: 30px;
+      line-height: 1;
+
+      .bottom-left {
+        margin-left: 35px;
+      }
+
+      .bottom-right {
+        margin-right: 35px;
+
+        a + a {
+          margin-left: 15px;
+        }
+
+        a > img {
+          width: 160px;
+        }
+
+        a.qrcode {
+          display: none;
+        }
+      }
+    }
   }
 
   #video-bg {
     width: 100%;
     margin-top: -42px;
     object-fit: contain;
+  }
+}
+
+@media (min-width: 1024px) {
+  .video-wrap .video-control #video-play {
+    display: block;
+    cursor: pointer;
+  }
+  .keep-header {
+    position: relative;
+  }
+
+  .bottom-right {
+    display: flex;
+    align-items: center;
+    a.qrcode {
+      display: inline-flex !important;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 62px;
+      height: 50px;
+      position: relative;
+      border: 1px solid #fff;
+      background: transparent;
+      border-radius: 5px 5px;
+
+      span {
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMA3cO7mfDSeKeP9+/QydtIakY+VAAAAIZJREFUKM+VkksOgCAMRKtFqX/uf1qRWmscI/EtWPBIMxlK3ChCRNLcmKlPSptVm250WU3MPL0qvSxnDMbyVE6sqjHHGYsSy2YKEnanCqwMqC48YX61HecHPhDwGD869IGonKJW6xCVWFE4UCgyByhKlaTUQ72g7FNgIKoCKg9fXRsF1ceK7rjBEHokzscQAAAAAElFTkSuQmCC")
+          no-repeat center center;
+        background-size: 26px 26px;
+        color: #fff;
+      }
+
+      &:hover {
+        img.qrcode {
+          display: block;
+        }
+      }
+    }
+    img.qrcode {
+      display: none;
+      position: absolute;
+      right: 0;
+      bottom: 60px;
+    }
   }
 }
 </style>
