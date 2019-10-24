@@ -47,6 +47,7 @@
         </div>
       </div>
     </header>
+    <div class="filling"></div>
   </div>
 </template>
 
@@ -163,15 +164,16 @@ export default {}
     margin-top: -42px;
     object-fit: contain;
   }
+
+  .filling {
+    height: calc(49.6vw);
+  }
 }
 
 @media (min-width: 1024px) {
   .video-wrap .video-control #video-play {
     display: block;
     cursor: pointer;
-  }
-  .keep-header {
-    position: relative;
   }
 
   .bottom-right {
