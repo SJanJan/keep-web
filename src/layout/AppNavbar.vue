@@ -1,17 +1,19 @@
 <template>
   <div class="header">
     <nav class="nav-wrapper-phone">
-      <a href="#"
-         class="menu">
-        <img src="@/assets/images/menu.png"
-             style="width:28px;"
-             alt="menu">
-      </a>
-      <a href="#"
-         class="logo"> <img style="width:68px;"
-             src="@/assets/phonelogo.png"
-             alt="logo">
-      </a>
+      <div style="padding: 22px 5.6%;">
+        <a href="#"
+           class="menu">
+          <img src="@/assets/images/menu.png"
+               style="width:28px;"
+               alt="menu">
+        </a>
+        <a href="#"
+           class="logo"> <img style="width:68px;"
+               src="@/assets/phonelogo.png"
+               alt="logo">
+        </a>
+      </div>
     </nav>
 
     <nav class="nav-wrapper-pc">
@@ -37,14 +39,14 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  position: fixed;
+  position: relative;
   z-index: 2;
   width: 100%;
 }
 .nav-wrapper-phone {
   display: none;
-  position: relative;
-  padding: 22px 28px;
+  position: absolute;
+  width: 100%;
 
   a > img {
     vertical-align: middle;
@@ -80,6 +82,10 @@ export default {
 }
 
 @media (min-width: 768px) {
+  .header {
+    position: fixed;
+  }
+
   .nav-wrapper-pc {
     display: flex;
     justify-content: space-between;
