@@ -4,6 +4,10 @@
     <TrainingContent />
     <RunParaContent />
     <RunContent />
+    <CommunityParaContent />
+    <Community />
+    <ParagraphStoreContent />
+    <StoreContent />
   </div>
 </template>
 
@@ -12,12 +16,20 @@ import ParagraphContent from "@/components/ParagraphContent";
 import TrainingContent from "@/components/TrainingContent";
 import RunParaContent from "@/components/RunParaContent";
 import RunContent from "@/components/RunContent";
+import CommunityParaContent from "@/components/CommunityParaContent";
+import Community from "@/components/Community";
+import ParagraphStoreContent from "@/components/ParagraphStoreContent";
+import StoreContent from "@/components/StoreContent";
 export default {
   components: {
     ParagraphContent,
     TrainingContent,
     RunParaContent,
-    RunContent
+    RunContent,
+    CommunityParaContent,
+    Community,
+    ParagraphStoreContent,
+    StoreContent,
   },
 }
 </script>
