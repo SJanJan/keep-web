@@ -2,6 +2,10 @@
   <section>
     <div class="run-wrap">
       <div class="run-wrap-inner">
+        <div class="run-track-wrap">
+          <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/runtrack-3ad5a221f9.png">
+          <div class="animate-circle"></div>
+        </div>
         <div class="run-config-wrap">
           <div class="run-config-pace">
             <div class="config-title"><i class="keep-icon-speed"></i><span>配速</span></div>
@@ -42,11 +46,37 @@
             <div id="freq-img"><img src="https://staticweb.keepcdn.com/staticShow/images/homepage/runcover-84021e09f4.png"></div>
           </div>
         </div>
+
         <div class="run-text-wrap">
           <div class="run-text-title">用步伐丈量世界</div>
           <div class="run-text-cont">在 Keep 记录你的跑步轨迹，制定有氧课程表，助你更快达成你的跑步目标</div>
           <a href="#"
              class="run-btn"><span>跑步轨迹</span><i></i></a>
+        </div>
+
+        <div class="run-data">
+          <div class="data-block">
+            <div class="data-title"><span class="text-line"></span><span>累计跑步</span></div>
+            <div class="data-val">8415.57</div>
+            <div class="data-unit">万公里</div>
+          </div>
+          <div class="data-block-right">
+            <div class="data-block2">
+              <div class="data-title"><i class="icon-speed"></i></div>
+              <div class="data-val">9.27</div>
+              <div class="data-unit">分/公里</div>
+            </div>
+            <div class="data-block2">
+              <div class="data-title"><i class="icon-duration"></i></div>
+              <div class="data-val">7.80</div>
+              <div class="data-unit">亿分钟</div>
+            </div>
+            <div class="data-block2">
+              <div class="data-title"><i class="icon-cal"></i></div>
+              <div class="data-val">62.05</div>
+              <div class="data-unit">亿千卡</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -71,10 +101,10 @@ export default {
   background-position: center center;
 }
 .run-wrap-inner {
-  position: absolute;
-  width: 100%;
+  position: relative;
   height: 100%;
   max-width: 1440px;
+  margin: 0 auto;
 }
 .run-config-wrap {
   width: 360px;
@@ -204,6 +234,12 @@ export default {
     text-decoration: none;
   }
 }
+
+.run-data,
+.run-track-wrap,
+.data-block-right {
+  display: none;
+}
 @media (min-width: 768px) {
   .run-wrap {
     height: 636px;
@@ -232,6 +268,7 @@ export default {
     .run-config-frequency {
       float: left;
       width: 340px;
+      height: 302px;
     }
     .run-config-frequency {
       margin-top: initial;
@@ -244,6 +281,132 @@ export default {
         }
       }
     }
+  }
+
+  .run-data {
+    display: block;
+    position: absolute;
+    left: 40px;
+    bottom: 255px;
+    .data-block {
+      .data-title {
+        font-size: 12px;
+        color: #8e8893;
+        .text-line {
+          display: inline-block;
+          height: 10px;
+          border: 2px solid #25c085;
+          margin-right: 7px;
+        }
+      }
+
+      .data-val {
+        display: inline-block;
+        font-size: 44px;
+        color: #ddd;
+        line-height: 1;
+        margin: 16px 0;
+        font-weight: bold;
+      }
+
+      .data-unit {
+        display: inline-block;
+        margin-left: 12px;
+        font-size: 12px;
+        color: #8e8893;
+      }
+    }
+  }
+
+  .run-track-wrap {
+    display: block;
+    position: absolute;
+    left: 20%;
+    top: 115px;
+
+    .animate-circle {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      bottom: -8px;
+      right: -12px;
+      border-radius: 50%;
+      background: #fff;
+      animation: scale 2s ease infinite normal;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .run-config-wrap {
+    top: -26px;
+    right: 28px;
+    bottom: initial;
+    width: 384px;
+    height: 694px;
+    margin-right: initial;
+
+    .run-config-pace,
+    .run-config-frequency {
+      float: none;
+      width: 384px;
+      height: 342px;
+    }
+
+    .run-config-frequency {
+      margin-top: 10px;
+      margin-left: initial;
+    }
+  }
+
+  .run-text-wrap {
+    top: 46px;
+    left: 298px;
+    right: initial;
+  }
+
+  .run-track-wrap {
+    left: 45px;
+  }
+
+  .run-data {
+    right: initial;
+    left: 44px;
+    bottom: 44px;
+    .data-block {
+      display: inline-block;
+    }
+    .data-block-right {
+      display: inline-block;
+      margin-left: 120px;
+
+      .data-block2 {
+        display: inline-block;
+        margin: 0 30px;
+        text-align: center;
+
+        .data-val {
+          color: #fff;
+          font-size: 27px;
+          line-height: 1;
+          margin: 16px 0;
+          font-weight: bold;
+        }
+        .data-unit {
+          font-size: 12px;
+          color: #8e8893;
+        }
+      }
+    }
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
   }
 }
 </style>
