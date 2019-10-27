@@ -4,6 +4,7 @@
     <AppNavbar />
     <app-header @playVideo='playVideo'></app-header>
     <AppContent />
+    <AppFooter />
   </div>
 </template>
 
@@ -12,13 +13,15 @@ import VideoPlay from "@/components/VideoPlay";
 import AppNavbar from "@/layout/AppNavbar";
 import AppHeader from "@/layout/AppHeader";
 import AppContent from '@/layout/AppContent'
+import AppFooter from '@/layout/AppFooter'
 export default {
   name: 'app',
   components: {
     VideoPlay,
     AppNavbar,
     AppHeader,
-    AppContent
+    AppContent,
+    AppFooter,
   },
   methods: {
     playVideo () {

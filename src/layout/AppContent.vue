@@ -9,6 +9,7 @@
     <ParagraphStoreContent />
     <StoreContent />
     <UsersContent />
+    <LinkContent />
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import Community from "@/components/Community";
 import ParagraphStoreContent from "@/components/ParagraphStoreContent";
 import StoreContent from "@/components/StoreContent";
 import UsersContent from "@/components/UsersContent";
+import LinkContent from "@/components/LinkContent";
 export default {
   components: {
     ParagraphContent,
@@ -33,6 +35,7 @@ export default {
     ParagraphStoreContent,
     StoreContent,
     UsersContent,
+    LinkContent,
   },
 }
 </script>
