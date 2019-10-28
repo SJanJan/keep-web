@@ -2,7 +2,7 @@
   <section>
     <div class="store-wrap">
       <div class="store-wrap-inner">
-        <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/store-bg320-f6ad1de157.jpg"
+        <img src="@/assets/images/store-bg320.jpg"
              class="store-bg-pic">
         <div class="store-goods"></div>
         <div class="store-goods-text">更多智能运动产品 持续推出中</div>
@@ -81,7 +81,7 @@ export default {
     position: relative;
     height: 636px;
     background-color: #3d3744;
-    background-image: url(https://staticweb.keepcdn.com/staticShow/images/homepage/storebg-8918f5df5f.jpg);
+    background-image: url(../assets/images/storebg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -98,7 +98,7 @@ export default {
     bottom: 38px;
     width: 698px;
     height: 180px;
-    background-image: url(https://staticweb.keepcdn.com/staticShow/images/homepage/store-goods768-f05ed21ca5.png);
+    background-image: url(../assets/images/store-goods768.png);
   }
 
   .store-keleton {
@@ -108,7 +108,7 @@ export default {
     bottom: 180px;
     width: 583px;
     height: 419px;
-    background-image: url(https://staticweb.keepcdn.com/staticShow/images/homepage/store-keleton768-b9a9985a2c.png);
+    background-image: url(../assets/images/store-keleton768.png);
   }
 
   .store-text {
@@ -139,7 +139,7 @@ export default {
     margin: initial;
     width: 355px;
     height: 506px;
-    background-image: url(https://staticweb.keepcdn.com/staticShow/images/homepage/store-goods1024-62f39919aa.png);
+    background-image: url(../assets/images/store-goods1024.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -152,7 +152,7 @@ export default {
     bottom: -20px;
     width: 700px;
     height: 500px;
-    background-image: url(https://staticweb.keepcdn.com/staticShow/images/homepage/store-keleton1024-0e6069b60e.png);
+    background-image: url(../assets/images/store-keleton1024.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

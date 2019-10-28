@@ -1,21 +1,21 @@
 <template>
   <section class="link-wrap">
     <div class="link-wrap-inner">
-      <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/apppages-45ace3b44e.png"
+      <img src="@/assets/images/apppages.png"
            class="apppages">
-      <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/qrcode-9be5654ac6.png"
+      <img src="@/assets/images/qrcode.png"
            class="qrcode">
       <div class="download-app-wrap">
         <p>荣获 App Store 2015 年度精选<br>App Store 官方推荐的移动健身工具</p>
         <div class="link-btn-wrap">
           <a href="#">
-            <img src="https://staticweb.keepcdn.com/staticShow/images/appledownload-bf3fce6ff0.png">
+            <img src="@/assets/images/appledownload.png">
           </a>
           <div class="link-text">&nbsp;&nbsp;适用于 Apple Watch</div>
         </div>
         <div class="link-btn-wrap">
           <a href="#">
-            <img src="https://staticweb.keepcdn.com/staticShow/images/androiddownload-7af2fefe76.png">
+            <img src="@/assets/images/androiddownload.png">
           </a>
           <div class="link-text">&nbsp;TV 版可在电视应用市场下载</div>
         </div>
@@ -34,7 +34,7 @@ export default {
 .link-wrap {
   position: relative;
   height: 441.59px;
-  background-image: url(https://staticweb.keepcdn.com/staticShow/images/homepage/linkbg-cb03791bf9.jpg);
+  background-image: url(../assets/images/linkbg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

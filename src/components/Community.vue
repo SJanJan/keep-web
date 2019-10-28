@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="community-wrap">
-      <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/camera-e92b0dfd3d.png"
+      <img src="@/assets/images/camera.png"
            class="camera-pic">
       <div class="community-text">
         <div class="text-title">千万用户伴你训练</div>
@@ -27,7 +27,7 @@ export default {
   height: 763.19px;
   padding: 0;
   background-color: #3d3744;
-  background-image: url(https://staticweb.keepcdn.com/staticShow/images/homepage/communitybg-sm-07813e09e8.jpg);
+  background-image: url(../assets/images/communitybg-sm.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

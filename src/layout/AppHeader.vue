@@ -8,10 +8,10 @@
           <p class="phone-cont"
              style="font-size:14px;margin-bottom:40px;">一站式解决你所有的运动需求</p>
           <a class="phone-link"
-             href="#"><img src="https://staticweb.keepcdn.com/staticShow/images/appledownload-bf3fce6ff0.png"
+             href="#"><img src="@/assets/images/appledownload.png"
                  alt=""></a>
           <a class="phone-link"
-             href="#"><img src="https://staticweb.keepcdn.com/staticShow/images/androiddownload-7af2fefe76.png"
+             href="#"><img src="@/assets/images/androiddownload.png"
                  alt=""></a>
         </div>
       </div>
@@ -23,10 +23,10 @@
                autoplay
                loop></video>
         <div class="video-control">
-          <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/slogan-cfd33df7dd.png">
+          <img src="@/assets/images/slogan.png">
           <img @click="$emit('playVideo')"
                id="video-play"
-               src="https://staticweb.keepcdn.com/staticShow/images/homepage/play-1a7aadd99d.png">
+               src="@/assets/images/play.png">
         </div>
         <div class="video-bottom">
           <div class="bottom-left">
@@ -36,12 +36,12 @@
             一站式解决你所有的运动需求
           </div>
           <div class="bottom-right">
-            <a href="#"><img src="https://staticweb.keepcdn.com/staticShow/images/appledownload-bf3fce6ff0.png"
+            <a href="#"><img src="@/assets/images/appledownload.png"
                    alt=""></a>
-            <a href="#"><img src="https://staticweb.keepcdn.com/staticShow/images/androiddownload-7af2fefe76.png"
+            <a href="#"><img src="@/assets/images/androiddownload.png"
                    alt=""></a>
             <a href="javascript:;"
-               class="qrcode"><span></span><img src="https://staticweb.keepcdn.com/staticShow/images/homepage/qrcode-9be5654ac6.png"
+               class="qrcode"><span></span><img src="@/assets/images/qrcode.png"
                    class="qrcode"></a>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default {}
   display: none;
   width: 100%;
   height: 100%;
-  background-image: url(https://staticweb.keepcdn.com/staticShow/images/homepage/head-1bb5fdbe97.jpg);
+  background-image: url("../assets/images/head-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

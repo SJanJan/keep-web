@@ -1,8 +1,8 @@
 <template>
   <footer>
     <div class="footer-wrapper">
-      <p>Copyright (c) 2019-present, lijian</p>
-      <p>End</p>
+      <p style="color:#fff;">哪有什么天生如此，只是我们天天坚持
+        自律给我自由</p>
     </div>
   </footer>
 </template>
@@ -16,11 +16,11 @@ export default {
 <style lang="scss" scoped>
 footer {
   position: relative;
+  background: #584f60;
 }
 .footer-wrapper {
   color: black;
   text-align: center;
-  padding: 200px 0;
-  background: #fff;
+  padding: 100px 0;
 }
 </style>

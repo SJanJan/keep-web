@@ -3,7 +3,7 @@
     <div class="run-wrap">
       <div class="run-wrap-inner">
         <div class="run-track-wrap">
-          <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/runtrack-3ad5a221f9.png">
+          <img src="@/assets/images/runtrack.png">
           <div class="animate-circle"></div>
         </div>
         <div class="run-config-wrap">
@@ -43,7 +43,7 @@
             </div>
             <!-- <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/runchart-ae8422d700.png"
                  class="config-bg"> -->
-            <div id="freq-img"><img src="https://staticweb.keepcdn.com/staticShow/images/homepage/runcover-84021e09f4.png"></div>
+            <div id="freq-img"><img src="@/assets/images/runcover.png"></div>
           </div>
         </div>
 
@@ -95,7 +95,7 @@ export default {
   height: 763.19px;
   position: relative;
   background-color: #3d3744;
-  background-image: url(https://staticweb.keepcdn.com/staticShow/images/homepage/runbg-48ebfba6ba.jpg);
+  background-image: url(../assets/images/runbg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

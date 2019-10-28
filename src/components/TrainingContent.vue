@@ -5,7 +5,7 @@
         <div class="training-block">
           <a href="#"
              class="training-item"
-             style="background-image: url(https://static1.keepcdn.com/2016/11/08/15/1478591073270_750x700.jpg)">
+             :style="{backgroundImage:'url('+bg1+')' }">
             <div class="training-detail">
               <div class="training-title">瘦腿训练</div>
               <div>13分钟 49千卡</div>
@@ -14,7 +14,7 @@
           </a>
           <a href="#"
              class="training-item"
-             style="background-image: url('http://static1.keepcdn.com/2016/11/08/15/1478588565783_750x700.jpg')">
+             :style="{backgroundImage:'url('+bg2+')' }">
             <div class="training-detail">
               <div class="training-title">马甲线养成</div>
               <div>12分钟 61千卡</div>
@@ -24,7 +24,7 @@
 
           <a href="#"
              class="training-item"
-             style="background-image: url('http://static1.keepcdn.com/2017/03/02/18/1488452269169_750x700.jpg')">
+             :style="{backgroundImage:'url('+bg3+')' }">
             <div class="training-detail">
               <div class="training-title">瑜伽 · 身体韵律</div>
               <div>32分钟 135千卡</div>
@@ -34,7 +34,7 @@
 
           <a href="#"
              class="training-item"
-             style="background-image: url('https://static1.keepcdn.com/misc/2016/03/01/15/54cc47743b800000.jpg')">
+             :style="{backgroundImage:'url('+bg4+')' }">
             <div class="training-detail">
               <div class="training-title">地狱Burpees挑战</div>
               <div>13分钟 191千卡</div>
@@ -73,19 +73,19 @@
         </div>
 
         <div class="body-pic-wrap">
-          <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/body-17083f5af5.png"
+          <img src="@/assets/images/body.png"
                class="body-pic">
-          <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/bodycircle-de9a04cd4e.png"
+          <img src="@/assets/images/bodycircle.png"
                class="circle-pic">
-          <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/heart-ee688b8cbb.png"
+          <img src="@/assets/images/heart.png"
                class="animate-heart">
         </div>
 
-        <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/traindata-b45741aab8.png"
+        <img src="@/assets/images/traindata.png"
              class="data-pic">
-        <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/trainchart-22f298e54c.png"
+        <img src="@/assets/images/trainchart.png"
              class="chart-pic">
-        <img src="https://staticweb.keepcdn.com/staticShow/images/homepage/trainpic-ed1960e938.png"
+        <img src="@/assets/images/trainpic.png"
              class="cal-pic">
       </div>
     </div>
@@ -93,8 +93,19 @@
 </template>
 
 <script>
+import bg1 from "@/assets/images/1478591073270_750x700.jpg";
+import bg2 from "@/assets/images/1478588565783_750x700.jpg";
+import bg3 from "@/assets/images/1488452269169_750x700.jpg";
+import bg4 from "@/assets/images/54cc47743b800000.jpg";
 export default {
-
+  data () {
+    return {
+      bg1: bg1,
+      bg2: bg2,
+      bg3: bg3,
+      bg4: bg4,
+    }
+  },
 }
 </script>
 

@@ -30,34 +30,51 @@
 
 <script>
 
+import userAvatar from "@/assets/images/userAvatar.jpg";
+
 export default {
   data () {
     return {
       list: [],
       users: [
         {
-          img: "http://static1.keepcdn.com/avatar/2019/05/06/22/02/6adceeedae054358578ed72c2173c53f0585539f.jpg?imageMogr2/thumbnail/96x",
+          img: userAvatar,
           username: '左小立1',
           userAct: '刚做完了一组 全身拉伸',
         },
         {
-          img: "http://static1.keepcdn.com/avatar/2019/05/06/22/02/6adceeedae054358578ed72c2173c53f0585539f.jpg?imageMogr2/thumbnail/96x",
+          img: userAvatar,
           username: '左小立2',
           userAct: '刚做完了一组 全身拉伸',
         },
         {
-          img: "http://static1.keepcdn.com/avatar/2019/05/06/22/02/6adceeedae054358578ed72c2173c53f0585539f.jpg?imageMogr2/thumbnail/96x",
+          img: userAvatar,
           username: '左小立3',
           userAct: '刚做完了一组 全身拉伸',
         },
         {
-          img: "http://static1.keepcdn.com/avatar/2019/05/06/22/02/6adceeedae054358578ed72c2173c53f0585539f.jpg?imageMogr2/thumbnail/96x",
+          img: userAvatar,
           username: '左小立4',
           userAct: '刚做完了一组 全身拉伸',
         },
         {
-          img: "http://static1.keepcdn.com/avatar/2019/05/06/22/02/6adceeedae054358578ed72c2173c53f0585539f.jpg?imageMogr2/thumbnail/96x",
+          img: userAvatar,
           username: '左小立5',
+          userAct: '刚做完了一组 全身拉伸',
+        },
+        {
+          img: userAvatar,
+          username: '左小立6',
+          userAct: '刚做完了一组 全身拉伸',
+        },
+        {
+          img: userAvatar,
+          username: '左小立7',
+          userAct: '刚做完了一组 全身拉伸',
+        },
+        {
+          img: userAvatar,
+          username: '左小立8',
           userAct: '刚做完了一组 全身拉伸',
         }
       ],
@@ -74,6 +91,7 @@ export default {
   },
   methods: {
     async run () {
+
       await this.fadeout();
       await this.move()
       this.add();
@@ -101,7 +119,6 @@ export default {
 
     add: function () {
       var item = this.users[this.nextNum % 5];
-      item.key = this.nextNum;
       this.list.splice(this.list.length, 0, item)
       this.nextNum++
     },
@@ -139,13 +156,14 @@ export default {
 .user-list-wrap {
   position: absolute;
   width: 100%;
+  height: 380px;
+  overflow: hidden;
   top: 300px;
 
   .users-list {
     position: relative;
     margin: 0 auto;
     width: 240px;
-    height: 647px;
 
     li + li {
       margin-top: 28px;
@@ -171,6 +189,32 @@ export default {
         color: #584f60;
       }
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .users-wrap {
+    height: 560px;
+  }
+  .users-text {
+    width: 270px;
+    left: 100px;
+    top: 104px;
+    text-align: left;
+    .users-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+    .users-cont {
+      margin: 0;
+    }
+  }
+
+  .user-list-wrap {
+    right: 126px;
+    top: 104px;
+    width: 280px;
   }
 }
 
