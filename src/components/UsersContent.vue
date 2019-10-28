@@ -10,7 +10,8 @@
       </div>
       <div class="user-list-wrap">
         <ul class="users-list"
-            ref="aabb">
+            ref="usersList"
+            :class="{move:isMove}">
           <li v-for="(item) in list"
               :key="item.username">
             <a href="#"
@@ -35,6 +36,7 @@ import userAvatar from "@/assets/images/userAvatar.jpg";
 export default {
   data () {
     return {
+      isMove: false,
       list: [],
       users: [
         {
@@ -85,45 +87,51 @@ export default {
     this.list.push(...this.users)
   },
   mounted () {
-
     this.run();
-
   },
+
   methods: {
     async run () {
-
       await this.fadeout();
       await this.move()
-      this.add();
+      await this.remove()
+      await this.add();
       this.run();
     },
     fadeout () {
       return new Promise((resolve) => {
-        this.$refs['aabb'].children[0].classList.add('fadeout');
+        this.$refs['usersList'].firstElementChild.classList.add('fadeout');
+
         setTimeout(() => {
-          this.$refs['aabb'].children[0].style.opacity = 0;
-          resolve();
-        }, 900);
-      })
-    },
-    move () {
-      return new Promise((resolve) => {
-        this.$refs['aabb'].classList.add('move')
-        setTimeout(() => {
-          this.remove();
-          this.$refs['aabb'].classList.remove('move')
           resolve();
         }, 1000);
       })
     },
-
+    move () {
+      return new Promise((resolve) => {
+        this.isMove = true;
+        setTimeout(() => {
+          this.isMove = false;
+          resolve();
+        }, 1000);
+      })
+    },
+    // 始终往数组末尾添加被删除的首个元素
     add: function () {
-      var item = this.users[this.nextNum % 5];
+      let length = this.users.length;
+      let item = this.users[this.nextNum % length];
+
       this.list.splice(this.list.length, 0, item)
       this.nextNum++
+
+      if (this.nextNum > length - 1) this.nextNum = 0;
+
+      return this.$nextTick()
     },
+    // 移除首个元素
     remove: function () {
       this.list.splice(0, 1)
+      return this.$nextTick()
     },
   },
 }
@@ -220,6 +228,7 @@ export default {
 
 .fadeout {
   animation: fadeout 1s ease;
+  animation-fill-mode: forwards;
 }
 
 .move {
