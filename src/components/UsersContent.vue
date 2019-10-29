@@ -32,59 +32,55 @@
 <script>
 
 import userAvatar from "@/assets/images/userAvatar.jpg";
-
+const USERS = [
+  {
+    img: userAvatar,
+    username: '左小立1',
+    userAct: '刚做完了一组 全身拉伸',
+  },
+  {
+    img: userAvatar,
+    username: '左小立2',
+    userAct: '刚做完了一组 全身拉伸',
+  },
+  {
+    img: userAvatar,
+    username: '左小立3',
+    userAct: '刚做完了一组 全身拉伸',
+  },
+  {
+    img: userAvatar,
+    username: '左小立4',
+    userAct: '刚做完了一组 全身拉伸',
+  },
+  {
+    img: userAvatar,
+    username: '左小立5',
+    userAct: '刚做完了一组 全身拉伸',
+  },
+  {
+    img: userAvatar,
+    username: '左小立6',
+    userAct: '刚做完了一组 全身拉伸',
+  },
+  {
+    img: userAvatar,
+    username: '左小立7',
+    userAct: '刚做完了一组 全身拉伸',
+  },
+  {
+    img: userAvatar,
+    username: '左小立8',
+    userAct: '刚做完了一组 全身拉伸',
+  }
+]
 export default {
   data () {
     return {
       isMove: false,
-      list: [],
-      users: [
-        {
-          img: userAvatar,
-          username: '左小立1',
-          userAct: '刚做完了一组 全身拉伸',
-        },
-        {
-          img: userAvatar,
-          username: '左小立2',
-          userAct: '刚做完了一组 全身拉伸',
-        },
-        {
-          img: userAvatar,
-          username: '左小立3',
-          userAct: '刚做完了一组 全身拉伸',
-        },
-        {
-          img: userAvatar,
-          username: '左小立4',
-          userAct: '刚做完了一组 全身拉伸',
-        },
-        {
-          img: userAvatar,
-          username: '左小立5',
-          userAct: '刚做完了一组 全身拉伸',
-        },
-        {
-          img: userAvatar,
-          username: '左小立6',
-          userAct: '刚做完了一组 全身拉伸',
-        },
-        {
-          img: userAvatar,
-          username: '左小立7',
-          userAct: '刚做完了一组 全身拉伸',
-        },
-        {
-          img: userAvatar,
-          username: '左小立8',
-          userAct: '刚做完了一组 全身拉伸',
-        }
-      ],
+      list: [...USERS],
       nextNum: 0
     }
-  },
-  created () {
-    this.list.push(...this.users)
   },
   mounted () {
     this.run();
@@ -118,9 +114,8 @@ export default {
     },
     // 始终往数组末尾添加被删除的首个元素
     add: function () {
-      let length = this.users.length;
-      let item = this.users[this.nextNum % length];
-
+      let length = USERS.length;
+      let item = USERS[this.nextNum % length];
       this.list.splice(this.list.length, 0, item)
       this.nextNum++
 
