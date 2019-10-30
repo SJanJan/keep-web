@@ -90,8 +90,8 @@ export default {
     async run () {
       await this.fadeout();
       await this.move()
-      await this.remove()
-      await this.add();
+      await this.pop()
+      await this.push();
       this.run();
     },
     fadeout () {
@@ -113,7 +113,7 @@ export default {
       })
     },
     // 始终往数组末尾添加被删除的首个元素
-    add: function () {
+    push: function () {
       let length = USERS.length;
       let item = USERS[this.nextNum % length];
       this.list.splice(this.list.length, 0, item)
@@ -124,7 +124,7 @@ export default {
       return this.$nextTick()
     },
     // 移除首个元素
-    remove: function () {
+    pop: function () {
       this.list.splice(0, 1)
       return this.$nextTick()
     },
