@@ -6,6 +6,8 @@ cache:
     - node_modules
 install:
   - yarn
+script:
+  - yarn build
 before_script:
   - chmod 777 ./deploy.sh
 script:
